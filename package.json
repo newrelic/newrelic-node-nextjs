@@ -32,7 +32,6 @@
   "devDependencies": {
     "@newrelic/eslint-config": "^0.0.4",
     "@newrelic/test-utilities": "^6.4.0",
-    "eslint": "^8.8.0",
     "newrelic": "^8.7.1",
     "tap": "^15.1.6"
   },
