@@ -16,6 +16,7 @@ tap.test('Next.js', function (t) {
   let port
 
   t.before(async function () {
+    const { default: getPort } = await import('get-port')
     agent = utils.TestAgent.makeInstrumented()
     agent.registerInstrumentation({
       moduleName: './next-server',
