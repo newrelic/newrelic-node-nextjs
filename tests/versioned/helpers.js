@@ -8,6 +8,7 @@
 const helpers = module.exports
 const { exec } = require('child_process')
 const http = require('http')
+const utils = require('@newrelic/test-utilities')
 
 /**
  * Builds a Next.js app
@@ -15,10 +16,10 @@ const http = require('http')
  * @returns {Promise}
  *
  */
-helpers.build = function build(path = 'app') {
+helpers.build = function build() {
   return new Promise((resolve, reject) => {
     exec(
-      `./node_modules/.bin/next build ${path}`,
+      './node_modules/.bin/next build app',
       {
         cwd: __dirname
       },
@@ -39,9 +40,9 @@ helpers.build = function build(path = 'app') {
  * @param {number} [port=3001]
  * @returns {Promise}
  */
-helpers.start = async function start(path = 'app', port = 3001) {
+helpers.start = async function start(port = 3001) {
   // Needed to support the various locations tests may get loaded from (versioned VS tap <file> VS IDE debugger)
-  const fullPath = `${__dirname}/${path}`
+  const fullPath = `${__dirname}/app`
 
   const { startServer } = require('next/dist/server/lib/start-server')
   const app = await startServer({

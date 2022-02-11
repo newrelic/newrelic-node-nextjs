@@ -9,24 +9,21 @@ const tap = require('tap')
 const helpers = require('./helpers')
 const utils = require('@newrelic/test-utilities')
 
-tap.test('Next.js', function (t) {
+tap.test('Next.js', (t) => {
   t.autoend()
   let agent
   let app
   let port
 
-  t.before(async function () {
+  t.before(async () => {
+    const { default: getPort } = await import('get-port')
     agent = utils.TestAgent.makeInstrumented()
     agent.registerInstrumentation({
       moduleName: './next-server',
       type: 'web-framework',
       onRequire: require('../../lib/server')
     })
-    // I was hoping to use require.cache to see stuff was loaded via CLI
-    // istanbul and nyc is getting loaded so that might be a tell
-    // It also does not look like the CLI adds context to say the suite was executed
-    // via Tap CLI
-    await helpers.build()
+    //await helpers.build()
     port = await getPort()
     app = await helpers.start(port)
   })
