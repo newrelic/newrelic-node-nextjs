@@ -26,7 +26,7 @@ tap.test('Next.js', function (t) {
     // istanbul and nyc is getting loaded so that might be a tell
     // It also does not look like the CLI adds context to say the suite was executed
     // via Tap CLI
-    await helpers.build()
+    //await helpers.build()
     port = await getPort()
     app = await helpers.start(port)
   })
