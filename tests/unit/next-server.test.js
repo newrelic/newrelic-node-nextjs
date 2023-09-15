@@ -75,4 +75,15 @@ tap.test('middleware tracking', (t) => {
     )
     t.end()
   })
+
+  t.test('should instrument instance of next server and not prototype', (t) => {
+    const NewFakeServer = createMockServer()
+    const server = new NewFakeServer()
+    initialize(shim, server, 'next', true)
+    t.ok(shim.isWrapped(server.runMiddleware))
+    t.ok(shim.isWrapped(server.runApi))
+    t.ok(shim.isWrapped(server.renderHTML))
+    t.ok(shim.isWrapped(server.renderToResponseWithComponents))
+    t.end()
+  })
 })
