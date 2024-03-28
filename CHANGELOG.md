@@ -7,8 +7,6 @@
 
 #### Miscellaneous chores
 
-* **deps-dev:** bump follow-redirects from 1.15.5 to 1.15.6 ([#178](https://github.com/newrelic/newrelic-node-nextjs/pull/178)) ([956b9ff](https://github.com/newrelic/newrelic-node-nextjs/commit/956b9ffd719ea5da94573b38b056e547ff7ee040))
-    * Bumps [follow-redirects](https://github.com/follow-redirects/follow-redirects) from 1.15.5 to 1.15.6. - [Release notes](https://github.com/follow-redirects/follow-redirects/releases) - [Commits](https://github.com/follow-redirects/follow-redirects/compare/v1.15.5...v1.15.6)
 * Updated CI process for releases ([#183](https://github.com/newrelic/newrelic-node-nextjs/pull/183)) ([99a61c5](https://github.com/newrelic/newrelic-node-nextjs/commit/99a61c5fb5cb603de692fe813351d3f7f0c43780))
 
 ### v0.8.0 (2024-03-12)
