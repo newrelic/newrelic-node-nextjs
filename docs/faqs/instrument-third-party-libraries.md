@@ -6,7 +6,7 @@ A: Typically the New Relic Node.js agent auto-instruments all supported [3rd par
 
 ## Externalize 3rd party libraries in webpack
 
-To external all supported 3rd party libraries, add the following to `next.config.js`:
+To externalize all supported 3rd party libraries, add the following to `next.config.js`:
 
 ```js
 const nrExternals = require('@newrelic/next/load-externals')

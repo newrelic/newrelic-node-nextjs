@@ -2,7 +2,7 @@
 
 Q: Can `@newrelic/next` work when deploying to [Vercel](https://vercel.com/frameworks/nextjs), [AWS Amplify](https://aws.amazon.com/amplify/), [Netlify](https://www.netlify.com/with/nextjs/), [Azure Static Sites](https://azure.microsoft.com/en-us/products/app-service/static), etc?
 
-A: The short answer is no. Most of these cloud providers lack the ability to control run options to load `@newrelic/next`.  Also, most of these cloud providers execute code in a Functions as a Service(FaaS) environment.  Our agent requires different setup and then additional processes to load the telemetry.  Our recommendation is to rely on OpenTelemetry and load the telemetry via our OTLP endpoint.
+A: The short answer is no. Most of these cloud providers lack the ability to control run options to load `@newrelic/next`.  Also, most of these cloud providers execute code in a Function as a Service(FaaS) environment.  Our agent requires a different setup and then additional processes to load the telemetry.  Our recommendation is to rely on OpenTelemetry and load the telemetry via our OTLP endpoint.
 
 ## OpenTelemetry setup with New Relic
 
