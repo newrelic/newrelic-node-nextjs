@@ -1,6 +1,6 @@
 # Instrument 3rd Party Libraries within Next.js 
 
-Q: How can I get instrumentation to load for 3rd parties libraries within my Next.js application like mysql, mongodb, pino, winston, etc?  
+Q: How can I get instrumentation to load for 3rd party libraries within my Next.js application like mysql, mongodb, pino, winston, etc?  
 
 A: Typically the New Relic Node.js agent auto-instruments all supported [3rd party libraries](https://docs.newrelic.com/docs/apm/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent/#instrument).  Next.js, however, bundles your project and code spilts between server and client side via webpack.  To get auto-instrumentation to work, you must externalize all libraries within webpack.  
 
