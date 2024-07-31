@@ -1,5 +1,7 @@
 <a href="https://opensource.newrelic.com/oss-category/#community-plus"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/dark/Community_Plus.png"><source media="(prefers-color-scheme: light)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Community_Plus.png"><img alt="New Relic Open Source community plus project banner." src="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Community_Plus.png"></picture></a>
 
+**Note**: This instrumentation has been merged into the [New Relic Node.js Agent](https://github.com/newrelic/node-newrelic/releases/tag/v12.0.0), please upgrade to v12.0.0 of `newrelic`.
+
 # New Relic Next.js instrumentation 
 [![npm status badge][4]][5] [![Next.js Instrumentation CI][1]][2] [![codecov][6]][7]
 
